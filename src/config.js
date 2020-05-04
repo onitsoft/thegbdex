@@ -1,0 +1,17 @@
+const config = {
+  NAME: 'Dragondex',
+  DOMAIN: 'https://thegbdex.com',
+  API_BASE_URL: 'https://api.n.exchange/en/api/v1', 
+  SUPPORT_EMAIL: 'support@thegbdex.com',
+  PRICE_FETCH_INTERVAL: 60000,
+  ORDER_BOOK_FETCH_INTERVAL: 10000,
+  ORDER_DETAILS_FETCH_INTERVAL: 20000,
+  RECENT_ORDERS_INTERVAL: 20000,
+  RECENT_ORDERS_COUNT: 11,
+  PRICE_COMPARISON_INTERVAL: 60000,
+  REFERRAL_CODE: "gbdex",
+  KYC_DETAILS_FETCH_INTERVAL: 20000,
+  ADVANCED_MODE_ENABLED: false
+};
+
+export default config;

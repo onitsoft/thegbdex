@@ -1,0 +1,27 @@
+.btn.btn.btn {
+  color: $blue;
+  background-color: #fff;
+  border: 1px solid $blue;
+  padding: 8px 10px;
+  margin: 10px 0;
+  font-size: 14px;
+  width: 100%;
+  white-space: normal;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $blue;
+    background-color: #fff;
+    border: 1px solid $blue;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    margin: 10px;
+    max-width: 280px;
+  }
+}

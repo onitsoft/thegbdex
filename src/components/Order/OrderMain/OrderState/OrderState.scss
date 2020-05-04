@@ -1,0 +1,103 @@
+.container {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.title {
+  margin: 18px 0 0 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: $black;
+
+  span {
+    color: $gray;
+  }
+}
+
+.subtitle {
+  margin: 12px 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: $black;
+
+  a {
+    font-weight: 500;
+    color: $black;
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.warning {
+  margin: 15px 0 0 0;
+  color: $blue;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.another-order.another-order {
+  display: inline-block;
+  color: $blue;
+  font-weight: 500;
+  margin: 15px 0 8px 0;
+
+  &:hover {
+    color: $blue;
+    text-decoration: none;
+  }
+}
+
+.new-order-link.new-order-link {
+  color: $blue;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $blue;
+    text-decoration: none;
+  }
+}
+
+.status {
+  p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: $black;
+
+    b {
+      font-weight: 500;
+      color: $black;
+    }
+  }
+}
+
+.btn.btn.btn {
+  color: $blue;
+  background-color: #fff;
+  border: 1px solid $blue;
+  padding: 8px 10px;
+  margin: 10px 0;
+  font-size: 14px;
+  width: 100%;
+  white-space: normal;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $blue;
+    background-color: #fff;
+    border: 1px solid $blue;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    margin: 10px;
+    max-width: 280px;
+  }
+}
