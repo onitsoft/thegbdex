@@ -15,7 +15,7 @@ class Transitioning extends Component {
     console.log(this.props);
     const orderRef = this.props.match.params.orderRef;
     if (orderRef) {
-      document.location.href = `https://n.exchange/order/${orderRef}?session=${localStorage.token}`;
+      document.location.href = `https://dragondex.com.au/order/${orderRef}/redirect-to-n-exchange`;
     }
   }
 
@@ -29,24 +29,19 @@ class Transitioning extends Component {
                 <div className={`col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 ${styles.content}`}>
                   <div class={styles.heading}>
                     <div class={styles['heading-section']}>
-                      <img
-                        id="thegbdex"
-                        src="/img/CryptoFX_logo.png"
-                        alt="CryptoFX"
-                        style={{ maxWidth: 140, filter: 'invert(100%)' }}
-                      ></img>
+                      <img id="thegbdex" src="/img/CryptoFX_logo.png" alt="CryptoFX" style={{ maxWidth: 140, filter: 'invert(100%)' }} />
                     </div>
-                    <div className={styles.arrow}></div>
-                    <div className={styles.arrow}></div>
-                    <div className={styles.arrow}></div>
-                    <div className={styles.arrow}></div>
-                    <div className={styles.arrow}></div>
-                    <div className={styles.arrow}></div>
-                    <div className={styles.arrow}></div>
-                    <div className={styles.arrow}></div>
-                    <div className={styles.arrow}></div>
+                    <div className={styles.arrow} />
+                    <div className={styles.arrow} />
+                    <div className={styles.arrow} />
+                    <div className={styles.arrow} />
+                    <div className={styles.arrow} />
+                    <div className={styles.arrow} />
+                    <div className={styles.arrow} />
+                    <div className={styles.arrow} />
+                    <div className={styles.arrow} />
                     <div class={styles['heading-section']}>
-                      <img src="/img/logo.png" alt="N.Exchange"></img>
+                      <img src="/img/logo.png" alt="N.Exchange" />
                       <span>N.EXCHANGE</span>
                     </div>
                   </div>

@@ -20,7 +20,7 @@ class Testimonials extends Component {
     return (
       <I18n ns="translations">
         {t => (
-          <div className={styles.container}>
+          <div className={styles.container} id="recommendations">
             <div className={styles.header}>
               <div className="container">
                 <div className="row">

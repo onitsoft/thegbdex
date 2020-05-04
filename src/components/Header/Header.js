@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { I18n } from 'react-i18next';
 import ScrollToElement from 'scroll-to-element';
+import { HashLink } from 'react-router-hash-link';
 
 import Support from './Support/Support';
 // import LanguagePicker from './LanguagePicker/LanguagePicker';
-
 
 import styles from './Header.scss';
 
@@ -16,7 +16,7 @@ class Header extends Component {
     this.state = {
       showSupportModal: false,
     };
-  
+
     this.closeNavbar = this.closeNavbar.bind(this);
   }
 
@@ -38,34 +38,36 @@ class Header extends Component {
   closeSupportModal = () => this.setState({ showSupportModal: false });
 
   closeNavbar = () => {
-      $('.navbar-collapse').collapse('hide');
-  }
+    $('.navbar-collapse').collapse('hide');
+  };
 
-  componentDidUpdate(){
-    if(window.location.hash) {
-      ScrollToElement(`${window.location.hash}`,{
+  componentDidUpdate() {
+    if (window.location.hash) {
+      ScrollToElement(`${window.location.hash}`, {
         offset: 0,
         ease: 'linear',
-        duration: 1000
+        duration: 1000,
       });
-   }
+    }
   }
 
   isHomeHeader = () => {
-    if (window.location.pathname === '/' 
-      || window.location.pathname.indexOf('/faqs') !== -1 
-      || window.location.pathname.indexOf('/transitioning') !== -1) {
+    if (
+      window.location.pathname === '/' ||
+      window.location.pathname.indexOf('/faqs') !== -1 ||
+      window.location.pathname.indexOf('/transitioning') !== -1
+    ) {
       return true;
     }
     return false;
-  }
+  };
 
   render() {
     const isHomeHeader = this.isHomeHeader();
     return (
       <I18n ns="translations">
         {(t, { i18n }) => (
-          <div className={`${styles.header} ${ isHomeHeader ? styles.home : ''}`} data-test="header">
+          <div className={`${styles.header} ${isHomeHeader ? styles.home : ''}`} data-test="header">
             <div className="container">
               <div className="navbar-header">
                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">
@@ -94,47 +96,51 @@ class Header extends Component {
                 <ul className="nav navbar-nav navbar-right">
                   <li>
                     <Link onClick={() => this.closeNavbar()} to="/" className={styles.link}>
-                        HOME
-                    </Link>
-                  </li>
-
-                  <li>
-                   <Link onClick={() => this.closeNavbar()} to="/faqs" className={styles.link} data-test="faq-btn">
-                        FAQ
-                    </Link>
-                  </li>
-
-                  <li>
-                   <Link onClick={() => this.closeNavbar()} to="/" className={styles.link} data-test="faq-btn">
-                        MORE INFO
+                      HOME
                     </Link>
                   </li>
 
                   <li>
                     <Link onClick={() => this.closeNavbar()} to="/faqs" className={styles.link} data-test="faq-btn">
+                      FAQ
+                    </Link>
+                  </li>
+
+                  <li>
+                    <a href="https://www.cryptofxglobal.xyz/" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                      MORE INFO
+                    </a>
+                  </li>
+
+                  {/* <li>
+                    <Link onClick={() => this.closeNavbar()} to="/faqs" className={styles.link} data-test="faq-btn">
                         LATEST
                     </Link>
-                  </li>
+                  </li> */}
 
                   <li>
-                   <Link onClick={() => this.closeNavbar()} to="/faqs" className={styles.link} data-test="faq-btn">
-                        TELEGRAM
+                    <Link onClick={() => this.closeNavbar()} to="/faqs" className={styles.link} data-test="faq-btn">
+                      TELEGRAM
                     </Link>
                   </li>
 
                   <li>
-                   <Link onClick={() => this.closeNavbar()} to="/faqs" className={styles.link} data-test="faq-btn">
-                        RECOMMENDATIONS
-                    </Link>
+                    <HashLink smooth onClick={() => this.closeNavbar()} to="/#recommendations" className={styles.link} data-test="faq-btn">
+                      RECOMMENDATIONS
+                    </HashLink>
                   </li>
 
                   <li>
-                    <Link 
-                      onClick={() => { this.closeNavbar();this.setState({ showSupportModal: true });}} 
+                    <Link
+                      onClick={() => {
+                        this.closeNavbar();
+                        this.setState({ showSupportModal: true });
+                      }}
                       className={styles.link}
-                      to='#'
-                      data-test="support-btn">
-                        {t('header.support')}
+                      to="#"
+                      data-test="support-btn"
+                    >
+                      {t('header.support')}
                     </Link>
                   </li>
 

@@ -10,7 +10,14 @@ const Footer = () => (
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-8 col-md-6">
-              <p className={styles.address}>All rights reserved, The GB DEX {new Date().getFullYear()}, Britain </p>
+              <p className={styles.address}>
+                All rights reserved, The GB DEX {new Date().getFullYear()}, Britain
+                <br />
+                theGBdex is operated in partnership with{' '}
+                <a href="https://n.exchange/?ref=gbdex" target="_blank" rel="noopener noreferrer">
+                  n.exchange
+                </a>
+              </p>
             </div>
 
             <div className="col-xs-12 col-sm-4 col-md-6">
