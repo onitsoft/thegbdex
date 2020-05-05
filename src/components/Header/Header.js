@@ -119,9 +119,9 @@ class Header extends Component {
                   </li> */}
 
                   <li>
-                    <Link onClick={() => this.closeNavbar()} to="/faqs" className={styles.link} data-test="faq-btn">
+                    <a href="https://t.me/TheGBdex" target="_blank" rel="noopener noreferrer" className={styles.link}>
                       TELEGRAM
-                    </Link>
+                    </a>
                   </li>
 
                   <li>
