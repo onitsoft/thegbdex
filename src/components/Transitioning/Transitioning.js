@@ -12,7 +12,6 @@ class Transitioning extends Component {
   }
 
   redirect() {
-    console.log(this.props);
     const orderRef = this.props.match.params.orderRef;
     if (orderRef) {
       document.location.href = `https://n.exchange/order/${orderRef}`;
