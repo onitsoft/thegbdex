@@ -1,5 +1,5 @@
 const rules = {
-  BTC: /^[13][a-km-zA-HJ-NP-Z0-9]{26,33}$/,
+  BTC: /^(bc1|[13])[a-zA-HJ-NP-Z0-9]{25,39}$/,
   LTC: /^[LM3][a-km-zA-HJ-NP-Z1-9]{26,33}$/,
   ETH: /^0x[0-9a-fA-F]{40}$/,
   EOS: /^0x[0-9a-fA-F]{40}$/,
